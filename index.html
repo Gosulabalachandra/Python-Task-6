@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio - {{ name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hi, I'm {{ name }}</h1>
+    <p>{{ about }}</p>
+
+    <h3>Skills</h3>
+    <ul>
+      {% for skill in skills %}
+      <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('contact') }}">Contact Me</a>
+</body>
+</html>
